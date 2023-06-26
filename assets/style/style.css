@@ -1,1 +1,43 @@
 /* BASIC STYLES HERE */
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+body {
+    background-color: #00236a;
+}
+
+header h1 {
+    font-family: 'Tilt Prism', cursive;
+    font-size: 3rem;
+    color: #fccf0e;
+    text-align: center;
+}
+
+.question-card {
+    background-color: #131528;
+    color: white;
+    height: 15dvh;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #b9b9b9 solid 2px;
+    border-radius: 1vw;
+}
+
+.answer-card {
+    background-color: #131528;
+    color: white;
+    height: 15dvh;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #b9b9b9 solid 2px;
+    border-radius: 1vw;
+    transition: all 0.3s ease;
+}
+
+.answer-card:hover {
+    background-color: #fccf0e;
+    cursor: pointer;
+}
