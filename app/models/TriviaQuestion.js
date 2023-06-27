@@ -39,13 +39,13 @@ export class TriviaQuestion {
 
         for (let answerIndex = 0; answerIndex < answerArray.length; answerIndex++) {
             answerTemplate += `
-            <div onclick=${answerArray[answerIndex] == this.correctAnswer ? "app.TriviaController.selectedCorrectAnswer()" : "app.TriviaController.selectedInorrectAnswer()"} 
+            <div onclick=${answerArray[answerIndex] == this.correctAnswer ? "app.TriviaController.selectedCorrectAnswer()" : "app.TriviaController.selectedIncorrectAnswer()"} 
             class="col-5 answer-card">
                     <p>${answerArray[answerIndex]}</p>
             </div>
             `
 
-            if (answerIndex % 2 == 0 && answerIndex < 4 && answerIndex > 0) {
+            if (answerIndex == 1) {
                 answerTemplate += `
                         </section>
                     </div>
@@ -64,51 +64,6 @@ export class TriviaQuestion {
         `
 
         return answerTemplate
-
-        // switch (this.type) {
-        //     case 'multiple':
-        //         return `
-        //         <section class="row">
-        //             <div class="col-10 m-auto">
-        //                 <section class="row py-5 justify-content-around">
-        //                     <div onclick="app.TriviaController.selectedIncorrectAnswer()" class="col-5 answer-card">
-        //                         <p>${this.incorrectAnswers[0]}</p>
-        //                     </div>
-        //                     <div onclick="app.TriviaController.selectedIncorrectAnswer()" class="col-5 answer-card">
-        //                         <p>${this.incorrectAnswers[1]}</p>
-        //                     </div>
-        //                 </section>
-        //             </div>
-        //         </section>
-        //         <section class="row">
-        //         <div class="col-10 m-auto">
-        //             <section class="row py-1 justify-content-around">
-        //             <div onclick="app.TriviaController.selectedIncorrectAnswer()" class="col-5 answer-card">
-        //                 <p>${this.incorrectAnswers[2]}</p>
-        //             </div>
-        //             <div onclick="app.TriviaController.selectedCorrectAnswer()" class="col-5 answer-card">
-        //                 <p>${this.correctAnswer}</p>
-        //             </div>
-        //             </section>
-        //         </div>
-        //         </section>
-        //         `
-        //     case 'boolean':
-        //         return `
-        //         <section class="row">
-        //             <div class="col-10 m-auto">
-        //                 <section class="row py-5 justify-content-around">
-        //                     <div onclick="app.TriviaController.selectedCorrectAnswer()"  class="col-5 answer-card">
-        //                         <p>${this.correctAnswer}</p>
-        //                     </div>
-        //                     <div onclick="app.TriviaController.selectedIncorrectAnswer()" class="col-5 answer-card">
-        //                         <p>${this.incorrectAnswers[0]}</p>
-        //                     </div>
-        //                 </section>
-        //             </div>
-        //         </section>
-        //         `
-        // }
     }
 }
 
